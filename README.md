@@ -18,9 +18,9 @@ Command failed:
 user shell-prompt-theme (main) ✗
 ```
 
-Timestamp shown at the end of the line (Zsh: right-aligned, Bash: after arrow):
+Timestamp shown before user info, wrapped in brackets:
 ```
-user shell-prompt-theme (main) ➜ 14:32
+「14:32」 user shell-prompt-theme (main) ➜
 ```
 
 ## Features
