@@ -78,13 +78,7 @@ __zbuild_prompt() {
         arrow_color=$(__prompt_zcolor "$PROMPT_FAILURE_COLOR")
     fi
 
-    local time_str
-    time_str=${(%):-'%D{%H:%M}'}
-    local time_color
-    time_color=$(__prompt_zcolor "$PROMPT_TIME_COLOR")
-
-    PROMPT="%f%b${time_color}<${time_str}>${reset} ${user_color}${user_host}${reset} ${pwd_color}${pwd_part}${reset}${git_part}${tools_part} ${arrow_color}➜${reset} "
-    RPROMPT=""
+    PROMPT="%f%b${user_color}${user_host}${reset} ${pwd_color}${pwd_part}${reset}${git_part}${tools_part} ${arrow_color}➜${reset} "
 }
 
 autoload -Uz add-zsh-hook
