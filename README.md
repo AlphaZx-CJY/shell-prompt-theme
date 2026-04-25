@@ -20,7 +20,7 @@ user shell-prompt-theme (main) ✗
 
 Timestamp shown before user info, wrapped in brackets:
 ```
-「14:32」 user shell-prompt-theme (main) ➜
+<14:32> user shell-prompt-theme (main) ➜
 ```
 
 ## Features
