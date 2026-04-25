@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Shell Prompt Theme - User Configuration
+
+PROMPT_TOOLS="auto"
+PROMPT_TOOLS_ALWAYS_SHOW=0
+PROMPT_PATH_COLOR="brightblue"
+PROMPT_TOOLS_COLOR="gray"
+PROMPT_GIT_CLEAN_COLOR="cyan"
+PROMPT_GIT_DIRTY_COLOR="yellow"
+PROMPT_SUCCESS_COLOR="cyan"
+PROMPT_FAILURE_COLOR="red"
