@@ -77,18 +77,12 @@ __build_prompt() {
         arrow_color=$(__prompt_color_code "$PROMPT_FAILURE_COLOR")
     fi
 
-    local time_part=""
-    if [[ -n "${__prompt_last_seconds:-}" ]]; then
-        local elapsed=$((SECONDS - __prompt_last_seconds))
-        if [[ "$PROMPT_CMD_TIME_THRESHOLD" -gt 0 && $elapsed -ge "$PROMPT_CMD_TIME_THRESHOLD" ]]; then
-            local time_color
-            time_color=$(__prompt_color_code "gray")
-            time_part=" ${time_color}${elapsed}s${reset}"
-        fi
-    fi
-    __prompt_last_seconds=$SECONDS
+    local time_str
+    time_str=$(date '+%H:%M')
+    local time_color
+    time_color=$(__prompt_color_code "gray")
 
-    PS1="${reset}\[\e[22m\]${user_color}${user_host}${reset} ${pwd_color}${pwd_part}${reset}${git_part}${tools_part}${time_part} ${arrow_color}➜${reset} "
+    PS1="${reset}\[\e[22m\]${time_color}${time_str}${reset} ${user_color}${user_host}${reset} ${pwd_color}${pwd_part}${reset}${git_part}${tools_part} ${arrow_color}➜${reset} "
 }
 
 PROMPT_COMMAND='__build_prompt'

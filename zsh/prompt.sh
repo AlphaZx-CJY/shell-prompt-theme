@@ -77,18 +77,12 @@ __zbuild_prompt() {
         arrow_color=$(__prompt_zcolor "$PROMPT_FAILURE_COLOR")
     fi
 
-    local time_part=""
-    if [[ -n "${__prompt_last_seconds:-}" ]]; then
-        local elapsed=$((SECONDS - __prompt_last_seconds))
-        if [[ "$PROMPT_CMD_TIME_THRESHOLD" -gt 0 && $elapsed -ge "$PROMPT_CMD_TIME_THRESHOLD" ]]; then
-            local time_color
-            time_color=$(__prompt_zcolor "gray")
-            time_part=" ${time_color}${elapsed}s${reset}"
-        fi
-    fi
-    __prompt_last_seconds=$SECONDS
+    local time_str
+    time_str=${(%):-'%D{%H:%M}'}
+    local time_color
+    time_color=$(__prompt_zcolor "gray")
 
-    PROMPT="%f%b${user_color}${user_host}${reset} ${pwd_color}${pwd_part}${reset}${git_part}${tools_part}${time_part} ${arrow_color}➜${reset} "
+    PROMPT="%f%b${time_color}${time_str}${reset} ${user_color}${user_host}${reset} ${pwd_color}${pwd_part}${reset}${git_part}${tools_part} ${arrow_color}➜${reset} "
 }
 
 autoload -Uz add-zsh-hook
