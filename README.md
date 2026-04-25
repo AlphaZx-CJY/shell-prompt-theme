@@ -89,13 +89,13 @@ PROMPT_FAILURE_COLOR="neonred"
 
 This project is also available as an agent skill: **`shell-prompt-creator`**.
 
-Install via [skills.sh](https://skills.sh):
+Install manually by copying the `shell-prompt-creator/` directory to your agent's skills folder:
 
 ```bash
-npx skills add AlphaZx-CJY/shell-prompt-theme
+cp -r shell-prompt-creator ~/.claude/skills/
 ```
 
-Or manually copy the `shell-prompt-creator/` directory to your agent's skills folder.
+To publish on [skills.sh](https://skills.sh), create a dedicated repository with `shell-prompt-creator` files at the root (see `shell-prompt-creator/README.md`).
 
 ## Repository
 
