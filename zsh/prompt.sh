@@ -12,14 +12,14 @@ __prompt_last_exit=0
 __prompt_zcolor() {
     local name="$1"
     case "$name" in
-        red) echo '%F{red}' ;;
-        green) echo '%F{green}' ;;
-        yellow) echo '%F{yellow}' ;;
-        blue) echo '%F{blue}' ;;
-        cyan) echo '%F{cyan}' ;;
-        gray) echo '%F{gray}' ;;
-        brightblue) echo '%F{39}' ;;
-        *) echo '%f' ;;
+        red) printf '%s' '%F{red}' ;;
+        green) printf '%s' '%F{green}' ;;
+        yellow) printf '%s' '%F{yellow}' ;;
+        blue) printf '%s' '%F{blue}' ;;
+        cyan) printf '%s' '%F{cyan}' ;;
+        gray) printf '%s' '%F{gray}' ;;
+        brightblue) printf '%s' '%F{39}' ;;
+        *) printf '%s' '%f' ;;
     esac
 }
 

@@ -12,14 +12,14 @@ __prompt_last_exit=0
 __prompt_color_code() {
     local name="$1"
     case "$name" in
-        red) echo '\[\e[31m\]' ;;
-        green) echo '\[\e[32m\]' ;;
-        yellow) echo '\[\e[33m\]' ;;
-        blue) echo '\[\e[34m\]' ;;
-        cyan) echo '\[\e[36m\]' ;;
-        gray) echo '\[\e[90m\]' ;;
-        brightblue) echo '\[\e[94m\]' ;;
-        *) echo '\[\e[0m\]' ;;
+        red) printf '%s' '\[\e[31m\]' ;;
+        green) printf '%s' '\[\e[32m\]' ;;
+        yellow) printf '%s' '\[\e[33m\]' ;;
+        blue) printf '%s' '\[\e[34m\]' ;;
+        cyan) printf '%s' '\[\e[36m\]' ;;
+        gray) printf '%s' '\[\e[90m\]' ;;
+        brightblue) printf '%s' '\[\e[94m\]' ;;
+        *) printf '%s' '\[\e[0m\]' ;;
     esac
 }
 

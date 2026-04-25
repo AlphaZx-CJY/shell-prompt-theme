@@ -3,13 +3,13 @@
 __prompt_shorten_path() {
     local pwd_path="$1"
     if [[ "$pwd_path" == "$HOME" ]]; then
-        echo "~"
+        printf '%s' "~"
         return
     fi
     if [[ "$pwd_path" == "$HOME"/* ]]; then
         pwd_path="~${pwd_path#$HOME}"
     fi
-    echo "$pwd_path"
+    printf '%s' "$pwd_path"
 }
 
 __prompt_user_host() {
