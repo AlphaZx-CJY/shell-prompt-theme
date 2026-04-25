@@ -19,6 +19,7 @@ __prompt_color_code() {
         cyan) printf '%s' '\[\e[36m\]' ;;
         gray) printf '%s' '\[\e[90m\]' ;;
         brightblue) printf '%s' '\[\e[94m\]' ;;
+        lightblue) printf '%s' '\[\e[38;5;110m\]' ;;
         *) printf '%s' '\[\e[0m\]' ;;
     esac
 }
@@ -31,6 +32,8 @@ __build_prompt() {
 
     local user_host
     user_host=$(__prompt_user_host)
+    local user_color
+    user_color=$(__prompt_color_code "$PROMPT_USER_COLOR")
 
     local pwd_part
     pwd_part=$(__prompt_shorten_path "$PWD")
@@ -69,7 +72,7 @@ __build_prompt() {
         arrow_color=$(__prompt_color_code "$PROMPT_FAILURE_COLOR")
     fi
 
-    PS1="${reset}${user_host} ${pwd_color}${pwd_part}${reset}${git_part}${tools_part} ${arrow_color}➜${reset} "
+    PS1="${reset}\[\e[22m\]${user_color}${user_host}${reset} ${pwd_color}${pwd_part}${reset}${git_part}${tools_part} ${arrow_color}➜${reset} "
 }
 
 PROMPT_COMMAND='__build_prompt'

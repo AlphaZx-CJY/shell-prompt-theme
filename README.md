@@ -5,17 +5,17 @@ A minimal, clean shell prompt theme for Bash and Zsh with smart git branch displ
 ## Preview
 
 ```
-~/projects/shell-prompt-theme (main) ➜
+user ~/.../shell-prompt-theme (main) ➜
 ```
 
 With tool hints:
 ```
-~/projects/shell-prompt-theme (main) [py:3.11|node:20.5] ➜
+user ~/.../shell-prompt-theme (main) [py:3.11|node:20.5] ➜
 ```
 
 Command failed:
 ```
-~/projects/shell-prompt-theme (main) ✗
+user ~/.../shell-prompt-theme (main) ✗
 ```
 
 ## Features
@@ -55,8 +55,9 @@ PROMPT_TOOLS="auto"
 # Always show tool versions even without project files
 PROMPT_TOOLS_ALWAYS_SHOW=0
 
-# Color settings (red, green, yellow, blue, cyan, gray)
-PROMPT_PATH_COLOR="blue"
+# Color settings (red, green, yellow, blue, cyan, gray, lightblue)
+PROMPT_USER_COLOR="yellow"
+PROMPT_PATH_COLOR="lightblue"
 PROMPT_TOOLS_COLOR="gray"
 PROMPT_GIT_CLEAN_COLOR="cyan"
 PROMPT_GIT_DIRTY_COLOR="yellow"
