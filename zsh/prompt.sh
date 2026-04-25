@@ -20,6 +20,11 @@ __prompt_zcolor() {
         gray) printf '%s' '%F{gray}' ;;
         brightblue) printf '%s' '%F{39}' ;;
         lightblue) printf '%s' '%F{110}' ;;
+        neonpink) printf '%s' '%F{201}' ;;
+        neoncyan) printf '%s' '%F{51}' ;;
+        neonpurple) printf '%s' '%F{141}' ;;
+        neongreen) printf '%s' '%F{46}' ;;
+        neonred) printf '%s' '%F{197}' ;;
         *) printf '%s' '%f' ;;
     esac
 }

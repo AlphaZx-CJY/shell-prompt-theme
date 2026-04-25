@@ -55,14 +55,15 @@ PROMPT_TOOLS="auto"
 # Always show tool versions even without project files
 PROMPT_TOOLS_ALWAYS_SHOW=0
 
-# Color settings (red, green, yellow, blue, cyan, gray, lightblue)
-PROMPT_USER_COLOR="yellow"
-PROMPT_PATH_COLOR="lightblue"
-PROMPT_TOOLS_COLOR="gray"
-PROMPT_GIT_CLEAN_COLOR="cyan"
-PROMPT_GIT_DIRTY_COLOR="yellow"
-PROMPT_SUCCESS_COLOR="cyan"
-PROMPT_FAILURE_COLOR="red"
+# Color settings (red, green, yellow, blue, cyan, gray, lightblue,
+#                 neonpink, neoncyan, neonpurple, neongreen, neonred)
+PROMPT_USER_COLOR="neonpink"
+PROMPT_PATH_COLOR="neoncyan"
+PROMPT_TOOLS_COLOR="neonpurple"
+PROMPT_GIT_CLEAN_COLOR="neongreen"
+PROMPT_GIT_DIRTY_COLOR="neonpink"
+PROMPT_SUCCESS_COLOR="neoncyan"
+PROMPT_FAILURE_COLOR="neonred"
 ```
 
 ### Supported Tool Identifiers

@@ -20,6 +20,11 @@ __prompt_color_code() {
         gray) printf '%s' '\[\e[90m\]' ;;
         brightblue) printf '%s' '\[\e[94m\]' ;;
         lightblue) printf '%s' '\[\e[38;5;110m\]' ;;
+        neonpink) printf '%s' '\[\e[38;5;201m\]' ;;
+        neoncyan) printf '%s' '\[\e[38;5;51m\]' ;;
+        neonpurple) printf '%s' '\[\e[38;5;141m\]' ;;
+        neongreen) printf '%s' '\[\e[38;5;46m\]' ;;
+        neonred) printf '%s' '\[\e[38;5;197m\]' ;;
         *) printf '%s' '\[\e[0m\]' ;;
     esac
 }
