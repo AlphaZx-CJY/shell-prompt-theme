@@ -5,17 +5,17 @@ A minimal, clean shell prompt theme for Bash and Zsh with smart git branch displ
 ## Preview
 
 ```
-user ~/.../shell-prompt-theme (main) ➜
+user shell-prompt-theme (main) ➜
 ```
 
 With tool hints:
 ```
-user ~/.../shell-prompt-theme (main) [py:3.11|node:20.5] ➜
+user shell-prompt-theme (main) [py:3.11|node:20.5] ➜
 ```
 
 Command failed:
 ```
-user ~/.../shell-prompt-theme (main) ✗
+user shell-prompt-theme (main) ✗
 ```
 
 ## Features
