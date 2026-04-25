@@ -2,28 +2,31 @@
 
 A minimal, clean shell prompt theme for Bash and Zsh with smart git branch display and optional development toolchain hints.
 
+Zero dependencies — no Oh-My-Zsh, no Nerd Fonts, no external packages.
+
 ## Preview
 
-```
+```bash
 user shell-prompt-theme (main) ➜
 ```
 
 With tool hints:
-```
+```bash
 user shell-prompt-theme (main) [py:3.11|node:20.5] ➜
 ```
 
 Command failed:
-```
+```bash
 user shell-prompt-theme (main) ✗
 ```
 
 ## Features
 
-- Git branch — auto-shows when inside a git repo, hidden otherwise. Color indicates clean (cyan) or dirty (yellow) state.
-- Arrow prompt — `➜` in cyan when last command succeeded, `✗` in red when it failed.
-- Toolchain hints — optionally display active Python virtualenv, Node.js, Rust, Go, or Docker context.
-- Zero dependencies — no Oh-My-Zsh, no Nerd Fonts, no external packages.
+- **Git branch** — auto-shows when inside a git repo, hidden otherwise. Color indicates clean (cyan) or dirty (pink) state.
+- **Arrow prompt** — `➜` in cyan when last command succeeded, `✗` in red when it failed.
+- **Toolchain hints** — optionally display active Python virtualenv, Node.js, Rust, Go, or Docker context.
+- **Soft cyberpunk palette** — neon-inspired 256-color scheme that's easy on the eyes.
+- **Zero dependencies** — pure shell, works on any Unix-like system.
 
 ## Quick Start
 
@@ -81,6 +84,18 @@ PROMPT_FAILURE_COLOR="neonred"
 ```bash
 ./install.sh --uninstall
 ```
+
+## Agent Skill
+
+This project is also available as an agent skill: **`shell-prompt-creator`**.
+
+Install via [skills.sh](https://skills.sh):
+
+```bash
+npx skills add AlphaZx-CJY/shell-prompt-theme
+```
+
+Or manually copy the `shell-prompt-creator/` directory to your agent's skills folder.
 
 ## Repository
 
