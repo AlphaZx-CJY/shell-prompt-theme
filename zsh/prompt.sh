@@ -20,11 +20,11 @@ __prompt_zcolor() {
         gray) printf '%s' '%F{gray}' ;;
         brightblue) printf '%s' '%F{39}' ;;
         lightblue) printf '%s' '%F{110}' ;;
-        neonpink) printf '%s' '%F{201}' ;;
-        neoncyan) printf '%s' '%F{51}' ;;
-        neonpurple) printf '%s' '%F{141}' ;;
-        neongreen) printf '%s' '%F{46}' ;;
-        neonred) printf '%s' '%F{197}' ;;
+        neonpink) printf '%s' '%F{168}' ;;
+        neoncyan) printf '%s' '%F{73}' ;;
+        neonpurple) printf '%s' '%F{103}' ;;
+        neongreen) printf '%s' '%F{72}' ;;
+        neonred) printf '%s' '%F{167}' ;;
         *) printf '%s' '%f' ;;
     esac
 }
@@ -77,7 +77,18 @@ __zbuild_prompt() {
         arrow_color=$(__prompt_zcolor "$PROMPT_FAILURE_COLOR")
     fi
 
-    PROMPT="%f%b${user_color}${user_host}${reset} ${pwd_color}${pwd_part}${reset}${git_part}${tools_part} ${arrow_color}➜${reset} "
+    local time_part=""
+    if [[ -n "${__prompt_last_seconds:-}" ]]; then
+        local elapsed=$((SECONDS - __prompt_last_seconds))
+        if [[ "$PROMPT_CMD_TIME_THRESHOLD" -gt 0 && $elapsed -ge "$PROMPT_CMD_TIME_THRESHOLD" ]]; then
+            local time_color
+            time_color=$(__prompt_zcolor "gray")
+            time_part=" ${time_color}${elapsed}s${reset}"
+        fi
+    fi
+    __prompt_last_seconds=$SECONDS
+
+    PROMPT="%f%b${user_color}${user_host}${reset} ${pwd_color}${pwd_part}${reset}${git_part}${tools_part}${time_part} ${arrow_color}➜${reset} "
 }
 
 autoload -Uz add-zsh-hook

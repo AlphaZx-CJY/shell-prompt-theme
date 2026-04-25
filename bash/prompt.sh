@@ -20,11 +20,11 @@ __prompt_color_code() {
         gray) printf '%s' '\[\e[90m\]' ;;
         brightblue) printf '%s' '\[\e[94m\]' ;;
         lightblue) printf '%s' '\[\e[38;5;110m\]' ;;
-        neonpink) printf '%s' '\[\e[38;5;201m\]' ;;
-        neoncyan) printf '%s' '\[\e[38;5;51m\]' ;;
-        neonpurple) printf '%s' '\[\e[38;5;141m\]' ;;
-        neongreen) printf '%s' '\[\e[38;5;46m\]' ;;
-        neonred) printf '%s' '\[\e[38;5;197m\]' ;;
+        neonpink) printf '%s' '\[\e[38;5;168m\]' ;;
+        neoncyan) printf '%s' '\[\e[38;5;73m\]' ;;
+        neonpurple) printf '%s' '\[\e[38;5;103m\]' ;;
+        neongreen) printf '%s' '\[\e[38;5;72m\]' ;;
+        neonred) printf '%s' '\[\e[38;5;167m\]' ;;
         *) printf '%s' '\[\e[0m\]' ;;
     esac
 }
@@ -77,7 +77,18 @@ __build_prompt() {
         arrow_color=$(__prompt_color_code "$PROMPT_FAILURE_COLOR")
     fi
 
-    PS1="${reset}\[\e[22m\]${user_color}${user_host}${reset} ${pwd_color}${pwd_part}${reset}${git_part}${tools_part} ${arrow_color}➜${reset} "
+    local time_part=""
+    if [[ -n "${__prompt_last_seconds:-}" ]]; then
+        local elapsed=$((SECONDS - __prompt_last_seconds))
+        if [[ "$PROMPT_CMD_TIME_THRESHOLD" -gt 0 && $elapsed -ge "$PROMPT_CMD_TIME_THRESHOLD" ]]; then
+            local time_color
+            time_color=$(__prompt_color_code "gray")
+            time_part=" ${time_color}${elapsed}s${reset}"
+        fi
+    fi
+    __prompt_last_seconds=$SECONDS
+
+    PS1="${reset}\[\e[22m\]${user_color}${user_host}${reset} ${pwd_color}${pwd_part}${reset}${git_part}${tools_part}${time_part} ${arrow_color}➜${reset} "
 }
 
 PROMPT_COMMAND='__build_prompt'

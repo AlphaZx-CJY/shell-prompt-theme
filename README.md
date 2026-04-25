@@ -64,6 +64,10 @@ PROMPT_GIT_CLEAN_COLOR="neongreen"
 PROMPT_GIT_DIRTY_COLOR="neonpink"
 PROMPT_SUCCESS_COLOR="neoncyan"
 PROMPT_FAILURE_COLOR="neonred"
+
+# Show command execution time when it exceeds this many seconds
+# (set to 0 to always show, or increase to hide short commands)
+PROMPT_CMD_TIME_THRESHOLD=2
 ```
 
 ### Supported Tool Identifiers
