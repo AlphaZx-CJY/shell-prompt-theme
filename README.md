@@ -18,6 +18,11 @@ Command failed:
 user shell-prompt-theme (main) ✗
 ```
 
+Timestamp shown at the end of the line (Zsh: right-aligned, Bash: after arrow):
+```
+user shell-prompt-theme (main) ➜ 14:32
+```
+
 ## Features
 
 - Git branch — auto-shows when inside a git repo, hidden otherwise. Color indicates clean (cyan) or dirty (yellow) state.
@@ -64,6 +69,7 @@ PROMPT_GIT_CLEAN_COLOR="neongreen"
 PROMPT_GIT_DIRTY_COLOR="neonpink"
 PROMPT_SUCCESS_COLOR="neoncyan"
 PROMPT_FAILURE_COLOR="neonred"
+PROMPT_TIME_COLOR="gray"
 ```
 
 ### Supported Tool Identifiers

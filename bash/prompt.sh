@@ -80,9 +80,9 @@ __build_prompt() {
     local time_str
     time_str=$(date '+%H:%M')
     local time_color
-    time_color=$(__prompt_color_code "gray")
+    time_color=$(__prompt_color_code "$PROMPT_TIME_COLOR")
 
-    PS1="${reset}\[\e[22m\]${time_color}${time_str}${reset} ${user_color}${user_host}${reset} ${pwd_color}${pwd_part}${reset}${git_part}${tools_part} ${arrow_color}➜${reset} "
+    PS1="${reset}\[\e[22m\]${user_color}${user_host}${reset} ${pwd_color}${pwd_part}${reset}${git_part}${tools_part} ${arrow_color}➜${reset} ${time_color}${time_str}${reset} "
 }
 
 PROMPT_COMMAND='__build_prompt'

@@ -80,9 +80,10 @@ __zbuild_prompt() {
     local time_str
     time_str=${(%):-'%D{%H:%M}'}
     local time_color
-    time_color=$(__prompt_zcolor "gray")
+    time_color=$(__prompt_zcolor "$PROMPT_TIME_COLOR")
 
-    PROMPT="%f%b${time_color}${time_str}${reset} ${user_color}${user_host}${reset} ${pwd_color}${pwd_part}${reset}${git_part}${tools_part} ${arrow_color}➜${reset} "
+    PROMPT="%f%b${user_color}${user_host}${reset} ${pwd_color}${pwd_part}${reset}${git_part}${tools_part} ${arrow_color}➜${reset} "
+    RPROMPT="${time_color}${time_str}${reset}"
 }
 
 autoload -Uz add-zsh-hook
