@@ -18,6 +18,7 @@ __prompt_color_code() {
         blue) printf '%s' '\[\e[34m\]' ;;
         cyan) printf '%s' '\[\e[36m\]' ;;
         gray) printf '%s' '\[\e[90m\]' ;;
+        lightgray) printf '%s' '\[\e[38;5;250m\]' ;;
         brightblue) printf '%s' '\[\e[94m\]' ;;
         lightblue) printf '%s' '\[\e[38;5;110m\]' ;;
         neonpink) printf '%s' '\[\e[38;5;168m\]' ;;

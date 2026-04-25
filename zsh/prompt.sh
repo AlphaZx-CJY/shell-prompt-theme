@@ -18,6 +18,7 @@ __prompt_zcolor() {
         blue) printf '%s' '%F{blue}' ;;
         cyan) printf '%s' '%F{cyan}' ;;
         gray) printf '%s' '%F{gray}' ;;
+        lightgray) printf '%s' '%F{250}' ;;
         brightblue) printf '%s' '%F{39}' ;;
         lightblue) printf '%s' '%F{110}' ;;
         neonpink) printf '%s' '%F{168}' ;;
