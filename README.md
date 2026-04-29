@@ -58,7 +58,7 @@ PROMPT_TOOLS="auto"
 # Always show tool versions even without project files
 PROMPT_TOOLS_ALWAYS_SHOW=0
 
-# Color settings (red, green, yellow, blue, cyan, gray, lightgray, lightblue,
+# Color settings (red, green, yellow, blue, cyan, gray, lightgray, brightblue, lightblue,
 #                 neonpink, neoncyan, neonpurple, neongreen, neonred)
 PROMPT_USER_COLOR="neonpink"
 PROMPT_PATH_COLOR="neoncyan"
@@ -77,7 +77,7 @@ PROMPT_FAILURE_COLOR="neonred"
 | `node` / `js` | `node:20.5` | `package.json` or `.nvmrc` present |
 | `rs` / `rust` | `rs:1.75` | `Cargo.toml` present |
 | `go` | `go:1.21` | `go.mod` present |
-| `docker` | `docker` | `Dockerfile` / `docker-compose.yml` / `compose.yml` present |
+| `docker` | `docker` | `Dockerfile`, `docker-compose.yml`, `docker-compose.yaml`, `compose.yml`, or `compose.yaml` present |
 
 ## Uninstall
 
