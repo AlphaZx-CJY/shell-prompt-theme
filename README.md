@@ -85,18 +85,6 @@ PROMPT_FAILURE_COLOR="neonred"
 ./install.sh --uninstall
 ```
 
-## Agent Skill
-
-This project is also available as an agent skill: **`shell-prompt-creator`**.
-
-Install manually by copying the `shell-prompt-creator/` directory to your agent's skills folder:
-
-```bash
-cp -r shell-prompt-creator ~/.claude/skills/
-```
-
-To publish on [skills.sh](https://skills.sh), create a dedicated repository with `shell-prompt-creator` files at the root (see `shell-prompt-creator/README.md`).
-
 ## Repository
 
 Remote repository: https://github.com/AlphaZx-CJY/shell-prompt-theme.git
